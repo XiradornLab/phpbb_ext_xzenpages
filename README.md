@@ -1,10 +1,10 @@
-# PageDemo
+# xZenPages
 
 ## Installation
 
-Copy the extension to phpBB/ext/xiradorn/pagedemo
+Copy the extension to phpBB/ext/xiradorn/xzenpages
 
-Go to "ACP" > "Customise" > "Extensions" and enable the "PageDemo" extension.
+Go to "ACP" > "Customise" > "Extensions" and enable the "xZenPages" extension.
 
 ## License
 

@@ -8,7 +8,7 @@
  *
  */
 
-namespace xiradorn\pagedemo\controller;
+namespace xiradorn\xzenpages\controller;
 
 /**
  * PageDemo main controller.
@@ -44,17 +44,18 @@ class main
 	}
 
 	/**
-	 * Demo controller for route /demo/{name}
+	 * Demo controller for route /demo/{vars}
 	 *
-	 * @param string $name
+	 * @param string $vars
 	 *
 	 * @return \Symfony\Component\HttpFoundation\Response A Symfony Response object
 	 */
-	public function handle($name)
+	public function handle($vars)
 	{
-		$l_message = !$this->config['acme_demo_goodbye'] ? 'DEMO_HELLO' : 'DEMO_GOODBYE';
-		$this->template->assign_var('DEMO_MESSAGE', $this->user->lang($l_message, $name));
+		$this->template->assign_vars(array(
+			'XZP_DEMO_MESSAGE', $this->user->lang('XZP_PAGE_SAYHITO', $vars)
+		));
 
-		return $this->helper->render('demo_body.html', $name);
+		return $this->helper->render('xzp_page_body.html', $vars);
 	}
 }

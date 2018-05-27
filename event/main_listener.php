@@ -8,7 +8,7 @@
  *
  */
 
-namespace xiradorn\pagedemo\event;
+namespace xiradorn\xzenpages\event;
 
 /**
  * @ignore
@@ -66,7 +66,7 @@ class main_listener implements EventSubscriberInterface
 	{
 		$lang_set_ext = $event['lang_set_ext'];
 		$lang_set_ext[] = array(
-			'ext_name' => 'xiradorn/pagedemo',
+			'ext_name' => 'xiradorn/xzenpages',
 			'lang_set' => 'common',
 		);
 		$event['lang_set_ext'] = $lang_set_ext;
@@ -78,7 +78,7 @@ class main_listener implements EventSubscriberInterface
 	public function add_page_header_link()
 	{
 		$this->template->assign_vars(array(
-			'U_DEMO_PAGE'	=> $this->helper->route('xiradorn_pagedemo_controller', array('name' => 'world')),
+			'U_XZP_PAGE'	=> $this->helper->route('xiradorn_xzenpages_controller', array('vars' => 'xiradorn')),
 		));
 	}
 
@@ -91,8 +91,8 @@ class main_listener implements EventSubscriberInterface
 	{
 		if ($event['on_page'][1] === 'app' && strrpos($event['row']['session_page'], 'app.' . $this->php_ext . '/demo') === 0)
 		{
-			$event['location'] = $this->user->lang('VIEWING_ACME_DEMO');
-			$event['location_url'] = $this->helper->route('xiradorn_pagedemo_controller', array('name' => 'world'));
+			$event['location'] = $this->user->lang('VIEWING_XZP_DEMO');
+			$event['location_url'] = $this->helper->route('xiradorn_xzenpages_controller', array('name' => 'world'));
 		}
 	}
 }

@@ -3,7 +3,7 @@
     "type": "phpbb-extension",
     "description": "xZenPages - Basic Page Extension for buld your custom pages",
     "homepage": "https://xiradorn.it",
-    "version": "1.0.0-alpha",
+    "version": "1.0.0-beta",
     "time": "2018-05-27",
     "license": "GPL-2.0",
     "authors": [

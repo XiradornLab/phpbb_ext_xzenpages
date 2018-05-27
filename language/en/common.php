@@ -19,15 +19,9 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'DEMO_PAGE'			=> 'Demo',
-	'DEMO_HELLO'		=> 'Hello %s!',
-	'DEMO_GOODBYE'		=> 'Goodbye %s!',
+	'XZP_PAGE'						=> 'xZenPages',
 
-	'ACP_DEMO'					=> 'Settings',
-	'ACP_DEMO_GOODBYE'			=> 'Should say goodbye?',
-	'ACP_DEMO_SETTING_SAVED'	=> 'Settings have been saved successfully!',
+	'XZP_PAGE_SAYHITO'			=> 'Good day %s',
 
-	'ACME_DEMO_NOTIFICATION'	=> 'Acme demo notification',
-
-	'VIEWING_ACME_DEMO'			=> 'Viewing Acme Demo',
+	'VIEWING_XZP_DEMO'				=> 'Viewing xZenPages Demo',
 ));

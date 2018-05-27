@@ -1,14 +1,14 @@
 services:
-    xiradorn.pagedemo.controller:
-        class: xiradorn\pagedemo\controller\main
+    xiradorn.xzenpages.controller:
+        class: xiradorn\xzenpages\controller\main
         arguments:
             - '@config'
             - '@controller.helper'
             - '@template'
             - '@user'
 
-    xiradorn.pagedemo.listener:
-        class: xiradorn\pagedemo\event\main_listener
+    xiradorn.xzenpages.listener:
+        class: xiradorn\xzenpages\event\main_listener
         arguments:
             - '@controller.helper'
             - '@template'

@@ -1,3 +1,3 @@
-xiradorn_pagedemo_controller:
-    path: /demo/{name}
-    defaults: { _controller: xiradorn.pagedemo.controller:handle }
+xiradorn_xzenpages_controller:
+    path: /demo/{vars}
+    defaults: { _controller: xiradorn.xzenpages.controller:handle }
