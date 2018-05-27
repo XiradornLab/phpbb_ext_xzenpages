@@ -1,0 +1,18 @@
+services:
+    xiradorn.pagedemo.controller:
+        class: xiradorn\pagedemo\controller\main
+        arguments:
+            - '@config'
+            - '@controller.helper'
+            - '@template'
+            - '@user'
+
+    xiradorn.pagedemo.listener:
+        class: xiradorn\pagedemo\event\main_listener
+        arguments:
+            - '@controller.helper'
+            - '@template'
+            - '@user'
+            - '%core.php_ext%'
+        tags:
+            - { name: event.listener }
