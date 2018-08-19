@@ -35,7 +35,12 @@ class main
 	 * @param \phpbb\template\template	$template
 	 * @param \phpbb\user				$user
 	 */
-	public function __construct(\phpbb\config\config $config, \phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\user $user)
+	public function __construct(
+		\phpbb\config\config $config, 
+		\phpbb\controller\helper $helper, 
+		\phpbb\template\template $template, 
+		\phpbb\user $user
+	)
 	{
 		$this->config = $config;
 		$this->helper = $helper;
@@ -53,7 +58,8 @@ class main
 	public function handle($vars)
 	{
 		$this->template->assign_vars(array(
-			'XZP_DEMO_MESSAGE', $this->user->lang('XZP_PAGE_SAYHITO', $vars)
+			'XZP_DEMO_MESSAGE' 	=> $this->user->lang('XZP_PAGE_SAYHITO', $vars),
+			'XZP_DEMO_USER' 	=> $this->user->data['username'],
 		));
 
 		return $this->helper->render('xzp_page_body.html', $vars);

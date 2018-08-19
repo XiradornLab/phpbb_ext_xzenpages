@@ -21,7 +21,7 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'XZP_PAGE'						=> 'xZenPages',
 
-	'XZP_PAGE_SAYHITO'			=> 'Good day %s',
+	'XZP_PAGE_SAYHITO'				=> 'Good day %s',
 
 	'VIEWING_XZP_DEMO'				=> 'Viewing xZenPages Demo',
 ));

@@ -23,8 +23,8 @@ class main_listener implements EventSubscriberInterface
 	static public function getSubscribedEvents()
 	{
 		return array(
-			'core.user_setup'				=> 'load_language_on_setup',
-			'core.page_header'				=> 'add_page_header_link',
+			'core.user_setup'						=> 'load_language_on_setup',
+			'core.page_header'						=> 'add_page_header_link',
 			'core.viewonline_overwrite_location'	=> 'viewonline_page',
 		);
 	}
@@ -49,7 +49,11 @@ class main_listener implements EventSubscriberInterface
 	 * @param \phpbb\user               $user       User object
 	 * @param string                    $php_ext    phpEx
 	 */
-	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\user $user, $php_ext)
+	public function __construct(
+		\phpbb\controller\helper $helper, 
+		\phpbb\template\template $template, 
+		\phpbb\user $user, $php_ext
+	)
 	{
 		$this->helper   = $helper;
 		$this->template = $template;
